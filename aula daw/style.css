@@ -1,0 +1,19 @@
+table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    border: 2px solid black;
+    padding:8px;
+    text-align: center;
+}
+.Centro-Oeste{
+    background-color: green;
+}
+.Sudeste{
+    background-color: white;
+}
+.Sul{
+    background-color: red;
+}
