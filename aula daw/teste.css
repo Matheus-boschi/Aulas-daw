@@ -1,0 +1,84 @@
+body, p{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5 rem;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.principal{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100px 450px 150px;
+    grid-template-areas: "cabecalho cabecalho"
+                         "secao barra-lateral"
+                         "rodape rodape";
+}
+
+header{
+    grid-area: cabecalho;
+    background-color: dimgray;
+}
+
+section{
+    grid-area: secao;
+    background-color: lightslategray;
+}
+
+aside{
+    grid-area: barra-lateral;
+    background-color: black;
+}
+
+footer{
+    grid-area:rodape;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parte1, .parte2, .parte3{
+    width: 50%;
+    background-color: darkgray;
+}
+
+.parte2{
+    width: 50%;
+    margin: 0 2px;
+}
+
+.parte3{
+    margin: 0 2px;
+}
+
+@media(max-width: 768px){
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .parte1, .parte2, .parte3 {
+        margin: 0;
+        border: solid 1px #fff;
+        width:  49%;
+    }
+
+    .parte2{
+        width: 100%;
+        order: -1;
+    }
+
+    .principal{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "cabecalho"
+        "secao"
+        "barra-lateral"
+        "rodape"
+    }
+}
