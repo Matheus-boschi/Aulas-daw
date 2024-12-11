@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <title>Meu primeiro código js</title>
+</head>
+<body>
+    <button type="button" onclick="alert('Olá mundo !');">
+        Clique aqui!
+    </button>
+    <br>
+    <br>
+    <br>
+    <!--Escrevendo no html-->
+    <button type="button" onclick="document.write('Olá Mundo!');">Html</button>
+    <br>
+    <br>
+    <!--escrevendo em um elemento na pagina html-->
+    <p id="paragrafo">
+
+    </p>
+    <button type="button"
+        onclick="document.getElementById('paragrafo').innerHTML = 'Olá Mundo!';">
+        Elemento Html
+    </button>
+    <br>
+    <br>
+    <br>
+    <!--Escrevendo no console do navegador-->
+    <button type="button" onclick="console.log('Olá mundo!');">Console</button>
+
+    <script>
+        function minha_funcao(){
+            console.log("chamou minha função: minha_funcao")
+            var teste = "Douglas";
+            alert(teste)
+            console.log("Log após fechar o alert")
+
+        }
+    </script>
+
+</body>
+</html>
