@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .principal{
+            display: grid;
+            grid-template-columns: 26% 50% 25%;
+            grid-template-rows:400px 200px 200px ;
+            grid-template-areas: "parte1 parte1 parte2"
+                                 "parte1 parte4 parte4"
+                                 "parte3 parte5 parte5";
+
+        }
+        
+        .div1{
+            grid-area:parte1;
+            background-color: aqua;
+        }
+        
+        .div2{
+            grid-area:parte2;
+            background-color: red;
+        }
+        .div3{
+            grid-area:parte3;
+            background-color: purple
+        }
+        .div4{
+            grid-area:parte4;
+            background-color: black;
+        }
+        .div5{
+            grid-area:parte5;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+    </div>
+</body>
+</html>
