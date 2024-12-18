@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento fotos</title>
+</head>
+<body>
+    <form>
+        <h1>Solicitação de orçamento</h1>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-size: large;">Nome do cliente</label><br>
+          <input type="text" class="form-control" id="Nome do cliente" aria-describedby="Nome">
+        </div>
+        <br>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"style="font-size: large;">Email</label><br>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <br>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-size: large;">Tpo de serviço</label><br>
+          <select>
+            <option>Casamento</option>
+            <option>Formatura</option>
+            <option>Aniversário</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="Horas" class="form-label" style="font-size: large;">Duração Estimada (horas)</label><br>
+            <input type="number" class="form-control" id="Horas" aria-describedby="emailHelp">
+          </div>
+          <br>
+        <div class="mb-3">
+            <label for="quantidade_fotos" class="form-label" style="font-size: large ;">Quantidade de fotos</label><br>
+            <input type="number" class="form-control" id="Horas" aria-describedby="emailHelp">
+          </div>
+          <br>
+        <div class="mb-3">
+            <label for="Local" class="form-label" style="font-size: large;">Local</label><br>
+            <input type="text" class="form-control" id="Local" aria-describedby="Local">
+          </div>
+          <br>
+          <p>
+            <button type="submit" class="btn btn-primary" style="color:white; background-color:rgb(0, 110, 255); border-radius: 5%;" onclick="calcular()">Calcular Orçamento</button>
+          </p>
+      </form>
+
+      <p id="resultado"></p>
+      <script>
+        function calcular(){
+            var preco_hora = 150;
+            var preco_foto = 10;
+            var valor_duracao = document.getElementById('Horas').value;
+            //alert(valor_duracao)
+            var qtd_fotos = document.getElementById('quantidade_fotos').value
+            //alert(qtd_fotos)
+            var total  = (valor_duracao * preco_hora)  + (qtd_fotos * preco_foto);
+            alert("Total R$"+ total);
+
+
+        }
+
+      </script>
+</body>
+</html>
